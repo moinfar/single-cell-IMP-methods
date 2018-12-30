@@ -36,7 +36,6 @@ def make_sure_dir_exists(dire_name):
 
     try:
         os.makedirs(dire_name)
-        log("Dir `%s` created successfully." % dire_name)
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise e
