@@ -18,6 +18,6 @@ sh ./builder.sh
 cd ../..
 
 # scimpute
-cd MAGIC
+cd containers/MAGIC
 sh ./builder.sh
-cd ..
+cd ../..
