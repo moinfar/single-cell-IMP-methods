@@ -26,8 +26,8 @@ fi
 cp $inputpath $data_dir/$inputfilename
 docker run -v "$data_dir:/data" \
        --rm moinfar/sc-scimpute \
-       -i /data/$inputfilename -o /data/output
+       -i /data/$inputfilename -o /data/output/
 
 # copy results
-cp -r $data_dir/output $outputdir
+cp -r $data_dir/output $outdir
 cp $data_dir/output/scimpute_count.csv $outputpath

@@ -15,11 +15,9 @@ if(!file.exists(opt$input)) {
     stop(paste0("File `", input_file, "` not exists. Did you mount the containing volume into docker?"))
 }
 
-dir.create(opt$outputdir)
-
 library(scImpute)
 
-scimpute(count_path = input_file,
+scimpute(count_path = opt$input,
          infile = "csv",
          outfile = "csv",
          out_dir = opt$outputdir,
