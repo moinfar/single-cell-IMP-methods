@@ -3,7 +3,7 @@
 
 # r-base:3.4 with bioconductor
 cd _bio_r_base
-export rver=3.4.2
+export rver=3.4.3
 sh ./builder.sh
 cd ..
 
