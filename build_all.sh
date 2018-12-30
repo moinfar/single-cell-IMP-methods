@@ -8,13 +8,13 @@ cd ../..
 
 # python:3.6 with some good stuff (like pandas)
 cd containers/_bio_py
-export rver=3.6
+export pyver=3.6
 sh ./builder.sh
 cd ../..
 
 # python:2.7 with some good stuff (like pandas)
 cd containers/_bio_py
-export rver=2.7
+export pyver=2.7
 sh ./builder.sh
 cd ../..
 
