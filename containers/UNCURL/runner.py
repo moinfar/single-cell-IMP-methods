@@ -22,6 +22,8 @@ def parse_args():
 
     args = parser.parse_args()
 
+    return args
+
 
 def make_sure_dir_exists(dire_name):
     import errno
