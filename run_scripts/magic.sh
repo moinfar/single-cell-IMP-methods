@@ -25,9 +25,11 @@ fi
 # run algorithm
 cp $inputpath $data_dir/$inputfilename
 docker run -v "$data_dir:/data" \
-       --rm moinfar/sc-scimpute \
+       --rm moinfar/sc-magic \
        -i /data/$inputfilename -o /data/output/
 
 # copy results
 cp -r $data_dir/output $outdir
-cp $data_dir/output/scimpute_count.csv $outputpath
+cp $data_dir/output/magic_output.csv $outputpath
+
+echo "imputed data saved to $outputpath"

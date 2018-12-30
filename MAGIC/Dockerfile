@@ -1,4 +1,4 @@
-FROM moinfar/bio-py-base:3.5
+FROM moinfar/bio-py-base:3.6
 
 COPY installer.sh /tmp/installer.sh
 RUN sh /tmp/installer.sh && \

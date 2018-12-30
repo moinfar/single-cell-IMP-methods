@@ -1,1 +1,1 @@
-docker build -t moinfar/sc-magic .
+docker build -t moinfar/sc-magic:latest .
