@@ -17,7 +17,7 @@ cd containers/scImpute
 sh ./builder.sh
 cd ../..
 
-# scimpute
+# MAGIC
 cd containers/MAGIC
 sh ./builder.sh
 cd ../..
