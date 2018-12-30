@@ -1,2 +1,2 @@
  
-docker build --squash -t moinfar/sc-scimpute .
+docker build -t moinfar/sc-scimpute .
