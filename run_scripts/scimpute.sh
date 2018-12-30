@@ -26,7 +26,7 @@ fi
 cp $inputpath $data_dir/$inputfilename
 docker run -v "$data_dir:/data" \
        --rm moinfar/sc-scimpute \
-       -i /data/$inputfilename -o /data/output/
+       -i /data/$inputfilename -o /data/output/ ${@:4}
 
 # copy results
 cp -r $data_dir/output $outdir

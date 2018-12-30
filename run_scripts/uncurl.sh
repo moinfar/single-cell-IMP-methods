@@ -25,11 +25,11 @@ fi
 # run algorithm
 cp $inputpath $data_dir/$inputfilename
 docker run -v "$data_dir:/data" \
-       --rm moinfar/sc-magic \
+       --rm moinfar/sc-uncurl \
        -i /data/$inputfilename -o /data/output/ ${@:4}
 
 # copy results
 cp -r $data_dir/output $outdir
-cp $data_dir/output/magic_output.csv $outputpath
+cp $data_dir/output/uncurl_output.csv $outputpath
 
 echo "imputed data saved to $outputpath"

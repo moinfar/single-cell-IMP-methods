@@ -6,9 +6,15 @@ export rver=3.5.1
 sh ./builder.sh
 cd ../..
 
-# python:3.4 with some good stuff (like pandas)
+# python:3.6 with some good stuff (like pandas)
 cd containers/_bio_py
 export rver=3.6
+sh ./builder.sh
+cd ../..
+
+# python:2.7 with some good stuff (like pandas)
+cd containers/_bio_py
+export rver=2.7
 sh ./builder.sh
 cd ../..
 
@@ -19,5 +25,10 @@ cd ../..
 
 # MAGIC
 cd containers/MAGIC
+sh ./builder.sh
+cd ../..
+
+# UNCURL
+cd containers/UNCURL
 sh ./builder.sh
 cd ../..

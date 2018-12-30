@@ -5,3 +5,4 @@ docker push moinfar/bio-python:3.6
 
 docker push moinfar/sc-scimpute:latest
 docker push moinfar/sc-magic:latest
+docker push moinfar/sc-uncurl:latest
