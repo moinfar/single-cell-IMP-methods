@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 
 # r-base:3.4 with bioconductor
-cd _bio_r_base
+cd containers/_bio_r_base
 export rver=3.5.1
 sh ./builder.sh
-cd ..
+cd ../..
 
 # python:3.4 with some good stuff (like pandas)
-cd _bio_py
+cd containers/_bio_py
 export rver=3.6
 sh ./builder.sh
-cd ..
+cd ../..
 
 # scimpute
-cd scImpute
+cd containers/scImpute
 sh ./builder.sh
-cd ..
+cd ../..
 
 # scimpute
 cd MAGIC
