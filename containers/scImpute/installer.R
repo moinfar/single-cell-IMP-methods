@@ -1,6 +1,3 @@
-
-install.packages("optparse")
-
 library(devtools)
 
 # install scImpute
