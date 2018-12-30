@@ -20,9 +20,7 @@ def parse_args():
     parser.add_argument("--initialization", type=str, default="tsvd", help="initialization", metavar="STRING")
     parser.add_argument("--threads", type=int, default=8, help="number of threads", metavar="INT")
 
-    args = parser.parse_args()
-
-    return args
+    return parser.parse_args()
 
 
 def make_sure_dir_exists(dire_name):
@@ -41,9 +39,9 @@ print("run with these parametres: %s" % str(args))
 data = pd.read_csv(args.input, index_col=0)
 
 if args.gene_subset == 'non_zero':
-    genes_subset = max_variance_genes(data.values, nbins=5, frac=0.2) # select genes with max variance
-elif args.gene_subset == 'max_variance':
     genes_subset = np.sum(data.values, axis=1) != 0  # select nonzero genes
+elif args.gene_subset == 'max_variance':
+    genes_subset = max_variance_genes(data.values, nbins=5, frac=0.2) # select genes with max variance
 else:
     raise NotImplementedError("optin `%s` for `gene_subset` not defined." % args.gene_subset)
 
