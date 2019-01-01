@@ -22,4 +22,3 @@ install.packages(c("MCMCpack",
                    "schoolmath",
                    "devtools",
                    "RColorBrewer"))
-

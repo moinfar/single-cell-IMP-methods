@@ -3,24 +3,18 @@ library("optparse")
 
 option_list = list(
     make_option(c("-i", "--input"), type="character", default="input_count.csv", help="input count file to be imputed [default= %default]", metavar="character"),
-	make_option(c("-o", "--output"), type="character", default="imputed_count.csv", help="file which output should be stored in [default= %default]", metavar="character"),
-	make_option(c("--gene_batch"), type="integer", default=50, help="number of genes per batch, therefore num_batches = choose_genes (or numgenes)/gene_batch. Max value is 150 [default= %default]", metavar="integer"),
+    make_option(c("-o", "--outputdir"), type="character", default="/output", help="directory which output should be stored in [default= %default]", metavar="character"),
+    make_option(c("--gene_batch"), type="integer", default=50, help="number of genes per batch, therefore num_batches = choose_genes (or numgenes)/gene_batch. Max value is 150 [default= %default]", metavar="integer"),
     make_option(c("--num_iter"), type="integer", default=20, help="number of iterations, choose based on data size [default= %default]", metavar="integer"),
     make_option(c("--num_cells_batch"), type="integer", default=1000, help="set this to 1000 if input number of cells is in the 1000s, else set it to 100 [default= %default]", metavar="integer"),
     make_option(c("--alpha"), type="double", default=1.0, help="DPMM dispersion parameter. A higher value spins more clusters whereas a lower value spins lesser clusters [default= %default]", metavar="double"),
-    make_option(c("--ncores"), type="integer", default=10, help="number of cores used in parallel computation [default= %default]", metavar="integer")
+    make_option(c("--ncores"), type="integer", default=4, help="number of cores used in parallel computation [default= %default]", metavar="integer")
 );
 
 
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
-
-input_file = file.path("/data", opt$input)
-if(!file.exists(input_file)) {
-    stop(paste0("File `", input_file, "` not exists. Did you mount `/data` volume into docker?"))
-}
-dir.create("./biscuit_results/")
 
 ############## packages required ##############
 
@@ -50,7 +44,7 @@ library(RColorBrewer)
 input_file_name <- input_file
 
 input_data_tab_delimited <- F
-is_format_genes_cells <-  TRUE
+is_format_genes_cells <- TRUE
 
 gene_batch <- opt$gene_batch
 num_iter <- opt$num_iter
@@ -59,9 +53,7 @@ alpha <- opt$alpha
 num_cores <- opt$ncores
 
 
-output_folder_name <- "./biscuit_results"
+output_folder_name <- opt$outputdir
 
 ## call BISCUIT
 source("BISCUIT_main.R")
-
-
