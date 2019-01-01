@@ -41,7 +41,7 @@ library(RColorBrewer)
 #############################################
 
 
-input_file_name <- input_file
+input_file_name <- opt$input
 
 input_data_tab_delimited <- F
 is_format_genes_cells <- TRUE
