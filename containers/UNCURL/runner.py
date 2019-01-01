@@ -58,4 +58,9 @@ print("ll: %f" % ll)
 data.iloc[genes_subset, :] = np.matmul(M, W) # imputation
 
 make_sure_dir_exists(args.outputdir)
+
+np.savetxt("genes_subset.csv", genes_subset, delimiter=",")
+np.savetxt("M.csv", M, delimiter=",")
+np.savetxt("W.csv", W, delimiter=",")
+
 data.to_csv(os.path.join(args.outputdir, "uncurl_output.csv"))
