@@ -41,8 +41,8 @@ library(RColorBrewer)
 #############################################
 
 
-input_file_name <- opt$input
-outputdir = sub("/$", "", opt$outputdir)
+input_file_name <- "data.csv"
+output_folder_name <- "output"
 
 input_data_tab_delimited <- F
 is_format_genes_cells <- TRUE
@@ -54,7 +54,12 @@ alpha <- opt$alpha
 num_cores <- opt$ncores
 
 
-output_folder_name <- outputdir
+# copy input file
+file.copy(opt$input, "data.csv")
 
 ## call BISCUIT
 source("BISCUIT_main.R")
+
+# copy output directory
+dir.create(opt$outputdir)
+file.copy("output", opt$outputdir, recursive=TRUE)
