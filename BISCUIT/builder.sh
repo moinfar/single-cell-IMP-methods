@@ -1,2 +1,3 @@
- 
-docker build --squash -t moinfar/sc-biscuit .
+#!/usr/bin/env bash
+
+docker build -t moinfar/sc-biscuit .
