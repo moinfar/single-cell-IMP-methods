@@ -42,7 +42,7 @@ library(RColorBrewer)
 
 
 input_file_name <- opt$input
-outputdir = sub("_$", "", opt$outputdir)
+outputdir = sub("/$", "", opt$outputdir)
 
 input_data_tab_delimited <- F
 is_format_genes_cells <- TRUE
