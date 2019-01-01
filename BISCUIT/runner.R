@@ -42,6 +42,7 @@ library(RColorBrewer)
 
 
 input_file_name <- opt$input
+outputdir = sub("_$", "", opt$outputdir)
 
 input_data_tab_delimited <- F
 is_format_genes_cells <- TRUE
@@ -53,7 +54,7 @@ alpha <- opt$alpha
 num_cores <- opt$ncores
 
 
-output_folder_name <- opt$outputdir
+output_folder_name <- outputdir
 
 ## call BISCUIT
 source("BISCUIT_main.R")
