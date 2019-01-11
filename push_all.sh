@@ -9,3 +9,4 @@ docker push moinfar/sc-magic:latest
 docker push moinfar/sc-uncurl:latest
 docker push moinfar/sc-biscuit:latest
 docker push moinfar/sc-dca:latest
+docker push moinfar/sc-decode:latest
