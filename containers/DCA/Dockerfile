@@ -8,4 +8,5 @@ RUN sh /tmp/installer.sh && \
 COPY runner.sh /app/runner.sh
 COPY tsv_to_csv.py.sh /app/tsv_to_csv.py.sh
 
+WORKDIR /app
 ENTRYPOINT ["bash", "runner.sh"]
