@@ -6,4 +6,4 @@ export outdir=$2
 
 mkdir $outdir
 bash extract_cols.sh $inputpath ./cols.txt
-./DECODE -i $inputpath -t csv -o $outdir "${@:3}" -g cols.txt
+./DECODE -i $inputpath -t csv -o $outdir -g cols.txt "${@:3}"
