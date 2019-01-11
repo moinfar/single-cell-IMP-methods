@@ -20,6 +20,8 @@ Command to run each algorithm:
 ./run_scripts/decode.sh input_file.csv output_file.csv output_dir
 # DrImpute
 ./run_scripts/drimpute.sh input_file.csv output_file.csv output_dir
+# kNN-smoothing
+./run_scripts/knn-smoothing.sh input_file.csv output_file.csv output_dir
 ```
 
 
