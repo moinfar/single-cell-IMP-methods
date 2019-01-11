@@ -6,7 +6,7 @@ RUN sh /tmp/installer.sh && \
     mkdir /app/
 
 COPY runner.sh /app/runner.sh
-COPY tsv_to_csv.py.sh /app/tsv_to_csv.py.sh
+COPY tsv_to_csv.py /app/tsv_to_csv.py
 
 WORKDIR /app
 ENTRYPOINT ["bash", "runner.sh"]
