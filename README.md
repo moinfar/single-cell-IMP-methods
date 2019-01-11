@@ -13,7 +13,13 @@ Command to run each algorithm:
 # UNCURL
 ./run_scripts/uncurl.sh input_file.csv output_file.csv output_dir
 # BISCUIT (is very buggy)
-./run_scripts/uncurl.sh input_file.csv output_file.csv output_dir 
+./run_scripts/uncurl.sh input_file.csv output_file.csv output_dir
+# DCA (cpu version only)
+./run_scripts/dca-cpu.sh input_file.csv output_file.csv output_dir
+# DECODE (needs verification)
+./run_scripts/decode.sh input_file.csv output_file.csv output_dir
+# DrImpute
+./run_scripts/drimpute.sh input_file.csv output_file.csv output_dir
 ```
 
 
