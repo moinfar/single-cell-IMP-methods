@@ -12,11 +12,11 @@ def parse_args():
 
     parser.add_argument("-i", "--input", type=str, default="input_count.csv", help="input count file to be imputed", metavar="FILE")
     parser.add_argument("-o", "--outputdir", type=str, default="/output", help="directory which output data will be stored in", metavar="FILE")
-    parser.add_argument("--gene_subset", type=str, default="non_zero", help="subset of genes used in algorithm (non_zero/max_variance)", metavar="STRING")
+    parser.add_argument("--gene-subset", type=str, default="non_zero", help="subset of genes used in algorithm (non_zero/max_variance)", metavar="STRING")
     parser.add_argument("--clusters", type=int, default=10, help="number of clusters", metavar="INT")
     parser.add_argument("--dist", type=str, default="Poiss", help="distribution model (Poiss/LogNorm/Gaussian/NB)", metavar="STRING")
-    parser.add_argument("--max_iters", type=int, default=30, help="max_iters parameter", metavar="INT")
-    parser.add_argument("--inner_max_iters", type=int, default=100, help="inner_max_iters parameter", metavar="INT")
+    parser.add_argument("--max-iters", type=int, default=30, help="max_iters parameter", metavar="INT")
+    parser.add_argument("--inner-max-iters", type=int, default=100, help="inner_max_iters parameter", metavar="INT")
     parser.add_argument("--initialization", type=str, default="tsvd", help="initialization", metavar="STRING")
     parser.add_argument("--threads", type=int, default=8, help="number of threads", metavar="INT")
 
@@ -58,4 +58,9 @@ print("ll: %f" % ll)
 data.iloc[genes_subset, :] = np.matmul(M, W) # imputation
 
 make_sure_dir_exists(args.outputdir)
+
+np.savetxt("genes_subset.csv", genes_subset, delimiter=",")
+np.savetxt("M.csv", M, delimiter=",")
+np.savetxt("W.csv", W, delimiter=",")
+
 data.to_csv(os.path.join(args.outputdir, "uncurl_output.csv"))

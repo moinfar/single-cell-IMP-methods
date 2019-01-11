@@ -25,12 +25,12 @@ fi
 # run algorithm
 cp $inputpath $data_dir/$inputfilename
 docker run -v "$data_dir:/data" \
-       --rm moinfar/sc-magic \
+       --rm moinfar/sc-biscuit \
        -i /data/$inputfilename -o /data/output/ ${@:4}
 
 # copy results
 mkdir -p $outdir
 cp -r $data_dir/output/* $outdir
-cp $data_dir/output/magic_output.csv $outputpath
+cp $data_dir/output/biscuit_count.csv $outputpath
 
 echo "imputed data saved to $outputpath"

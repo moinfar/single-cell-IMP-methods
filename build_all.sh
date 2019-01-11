@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# r-base:3.4 with bioconductor
+# r-base:3.5 with bioconductor
 cd containers/_bio_r_base
 export rver=3.5.1
 sh ./builder.sh
@@ -30,5 +30,25 @@ cd ../..
 
 # UNCURL
 cd containers/UNCURL
+sh ./builder.sh
+cd ../..
+
+# BISCUIT
+cd containers/BISCUIT
+sh ./builder.sh
+cd ../..
+
+# DCA
+cd containers/DCA
+sh ./builder.sh
+cd ../..
+
+# DECODE
+cd containers/DECODE
+sh ./builder.sh
+cd ../..
+
+# DrImpute
+cd containers/DrImpute
 sh ./builder.sh
 cd ../..
