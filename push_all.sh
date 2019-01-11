@@ -7,3 +7,5 @@ docker push moinfar/bio-python:2.7
 docker push moinfar/sc-scimpute:latest
 docker push moinfar/sc-magic:latest
 docker push moinfar/sc-uncurl:latest
+docker push moinfar/sc-biscuit:latest
+docker push moinfar/sc-dca:latest

@@ -32,3 +32,13 @@ cd ../..
 cd containers/UNCURL
 sh ./builder.sh
 cd ../..
+
+# BISCUIT
+cd containers/BISCUIT
+sh ./builder.sh
+cd ../..
+
+# DCA
+cd containers/DCA
+sh ./builder.sh
+cd ../..
