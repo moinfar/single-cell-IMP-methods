@@ -43,15 +43,20 @@ library(RColorBrewer)
 
 input_file_name <- "data.csv"
 output_folder_name <- "output"
+working_path <- "."
 
 input_data_tab_delimited <- F
 is_format_genes_cells <- TRUE
+z_true_labels_avl <- F
 
 gene_batch <- opt$gene_batch
 num_iter <- opt$num_iter
 num_cells_batch <- opt$num_cells_batch
 alpha <- opt$alpha
 num_cores <- opt$ncores
+
+# choose_cells <- 3000; #comment if you want all the cells to be considered
+# choose_genes <- 150; #comment if you want all the genes to be considered
 
 
 # copy input file
