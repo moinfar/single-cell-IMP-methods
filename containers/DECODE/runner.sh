@@ -4,6 +4,5 @@
 export inputpath=$1
 export outdir=$2
 
-mkdir ./results
-./DECODE $inputpath "${@:3}"
-mv ./results $2
+mkdir $outdir
+./DECODE -i $inputpath -t csv -o $outdir "${@:3}"
