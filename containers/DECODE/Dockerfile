@@ -5,6 +5,7 @@ RUN sh /tmp/installer.sh && \
     rm /tmp/installer.sh
 
 COPY runner.sh /app/runner.sh
+COPY extract_cols.sh /app/extract_cols.sh
 
 WORKDIR /app
 ENTRYPOINT ["bash", "runner.sh"]
