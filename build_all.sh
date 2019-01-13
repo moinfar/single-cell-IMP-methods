@@ -57,3 +57,8 @@ cd ../..
 cd containers/kNN-smoothing
 sh ./builder.sh
 cd ../..
+
+# SAUCIE
+cd containers/kNN-smoothing
+sh ./builder.sh
+cd ../..
