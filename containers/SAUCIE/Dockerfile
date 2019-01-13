@@ -7,4 +7,4 @@ RUN sh /tmp/installer.sh && \
 COPY runner.py /app/runner.py
 
 WORKDIR /app
-ENTRYPOINT ["bash", "runner.sh"]
+ENTRYPOINT ["python", "runner.py"]
