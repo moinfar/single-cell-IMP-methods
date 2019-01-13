@@ -67,3 +67,8 @@ cd ../..
 cd containers/SAVER
 sh ./builder.sh
 cd ../..
+
+# scVI
+cd containers/scVI
+sh ./builder.sh
+cd ../..
