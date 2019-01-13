@@ -62,3 +62,8 @@ cd ../..
 cd containers/SAUCIE
 sh ./builder.sh
 cd ../..
+
+# SAVER
+cd containers/SAVER
+sh ./builder.sh
+cd ../..

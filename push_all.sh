@@ -13,3 +13,4 @@ docker push moinfar/sc-decode:latest
 docker push moinfar/sc-drimpute:latest
 docker push moinfar/sc-knnsmoothing:latest
 docker push moinfar/sc-saucie:latest
+docker push moinfar/sc-saver:latest
