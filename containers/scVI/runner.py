@@ -54,6 +54,7 @@ trainer = UnsupervisedTrainer(vae,
                               frequency=5)
 trainer.train(n_epochs=args.n_epochs, lr=args.lr)
 
+make_sure_dir_exists(args.outputdir)
 trainer.get_all_latent_and_imputed_values(save_imputed=True,
                                           filename_imputation=os.path.join(args.outputdir, "imputed_values.csv"),
                                           save_latent=True,
