@@ -44,7 +44,11 @@ from scvi.dataset.csv import CsvDataset
 from scvi.models import VAE
 from scvi.inference import UnsupervisedTrainer
 
-dataset = CsvDataset(args.input)
+X = pd.read_csv(args.input, index_col=0)
+X = X.transpose()
+
+dataset = GeneExpressionDataset(*GeneExpressionDataset.get_attributes_from_matrix(X.values, labels=None),
+                                gene_names=X.columns.values, cell_types=None)
 vae = VAE(dataset.nb_genes, n_batch=0)
 
 trainer = UnsupervisedTrainer(vae,
@@ -54,8 +58,16 @@ trainer = UnsupervisedTrainer(vae,
                               frequency=5)
 trainer.train(n_epochs=args.n_epochs, lr=args.lr)
 
+results = trainer.get_all_latent_and_imputed_values(save_imputed=False,
+                                                    save_latent=False)
+
 make_sure_dir_exists(args.outputdir)
-trainer.get_all_latent_and_imputed_values(save_imputed=True,
-                                          filename_imputation=os.path.join(args.outputdir, "imputed_values.csv"),
-                                          save_latent=True,
-                                          filename_latent=os.path.join(args.outputdir, "latent.csv"))
+filename_latent=os.path.join(args.outputdir, "latent.csv")
+filename_imputation=os.path.join(args.outputdir, "imputed_values.csv")
+filename_scaled_imputation=os.path.join(args.outputdir, "scaled_imputed_values.csv")
+
+pd.DataFrame(results["latent"].T, columns=X.index.values).to_csv(filename_latent)
+pd.DataFrame(results["imputed_values"].T, columns=X.index.values, index=X.columns.values).to_csv(filename_imputation)
+pd.DataFrame(results["scaled_imputed_values"].T, columns=X.index.values, index=X.columns.values).to_csv(filename_scaled_imputation)
+
+print("Done!")
