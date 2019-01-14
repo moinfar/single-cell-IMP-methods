@@ -40,7 +40,7 @@ print("run with these parametres: %s" % str(args))
 
 # Main Part
 
-from scvi.dataset.csv import CsvDataset
+from scvi.dataset.csv import GeneExpressionDataset
 from scvi.models import VAE
 from scvi.inference import UnsupervisedTrainer
 
