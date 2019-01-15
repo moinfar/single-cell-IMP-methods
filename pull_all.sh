@@ -15,3 +15,4 @@ docker pull moinfar/sc-knnsmoothing:latest
 docker pull moinfar/sc-saucie:latest
 docker pull moinfar/sc-saver:latest
 docker pull moinfar/sc-scvi:latest
+docker pull moinfar/sc-zinbwave:latest

@@ -72,3 +72,8 @@ cd ../..
 cd containers/scVI
 sh ./builder.sh
 cd ../..
+
+# ZINB-WaVe
+cd containers/ZINB-WaVe
+sh ./builder.sh
+cd ../..
