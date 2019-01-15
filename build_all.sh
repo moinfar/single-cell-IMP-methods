@@ -77,3 +77,8 @@ cd ../..
 cd containers/ZINB-WaVe
 sh ./builder.sh
 cd ../..
+
+# netSmooth
+cd containers/netSmooth
+sh ./builder.sh
+cd ../..
