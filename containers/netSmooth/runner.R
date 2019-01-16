@@ -44,3 +44,5 @@ smoothed.SE <- netSmooth(SE, PPI, alpha=alpha)
 
 dir.create(opt$outputdir)
 write.csv(smoothed.SE, file.path(opt$outputdir, "netSmooth_output.csv"))
+
+print("Done")
