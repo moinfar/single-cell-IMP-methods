@@ -6,6 +6,7 @@ RUN sh /tmp/installer.sh && \
     mkdir /app/
 
 COPY runner.sh /app/runner.sh
+COPY transpose_it.py /app/transpose_it.py
 
 WORKDIR /app
 ENTRYPOINT ["bash", "runner.sh"]
