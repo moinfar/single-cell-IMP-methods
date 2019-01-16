@@ -82,3 +82,8 @@ cd ../..
 cd containers/netSmooth
 sh ./builder.sh
 cd ../..
+
+# deepImpute
+cd containers/deepImpute
+sh ./builder.sh
+cd ../..
