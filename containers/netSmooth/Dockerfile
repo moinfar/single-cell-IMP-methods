@@ -7,6 +7,7 @@ RUN apt-get install -y libgsl-dev && \
     mkdir /app/
 
 COPY runner.R /app/runner.R
+COPY runner.sh /app/runner.sh
 
 WORKDIR /app
-ENTRYPOINT ["Rscript", "runner.R"]
+ENTRYPOINT ["bash", "runner.sh"]

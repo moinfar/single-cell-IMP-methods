@@ -2,7 +2,9 @@ ARG rver
 # rocker/tidyverse has bioconductor and devtools installed
 FROM rocker/tidyverse:$rver
 
-# install base packages
-COPY installer.R /tmp/installer.R
-RUN Rscript /tmp/installer.R && \
-    rm /tmp/installer.R
+# install
+COPY installer.sh /tmp/installer.sh
+RUN sh /tmp/installer.sh && \
+    rm /tmp/installer.sh
+
+COPY time_it.sh /time_it.sh

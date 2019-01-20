@@ -6,6 +6,7 @@ RUN Rscript /tmp/installer.R && \
     mkdir /app/
 
 COPY runner.R /app/runner.R
+COPY runner.sh /app/runner.sh
 
 WORKDIR /app
 ENTRYPOINT ["Rscript", "runner.R"]

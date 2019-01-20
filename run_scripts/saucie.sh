@@ -26,7 +26,7 @@ fi
 cp "$inputpath" "$data_dir/$inputfilename"
 docker run -v "$data_dir:/data" \
        --rm moinfar/sc-saucie \
-       -i /data/$inputfilename -o /data/output/ ${@:4}
+       "/data/$inputfilename" "/data/output/" "${@:4}"
 
 # copy results
 mkdir -p "$outdir"
