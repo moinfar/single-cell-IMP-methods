@@ -23,14 +23,14 @@ if [ "${outputfilename##*.}" != "csv" ]; then
 fi
 
 # run algorithm
-cp $inputpath $data_dir/$inputfilename
+cp "$inputpath" "$data_dir/$inputfilename"
 docker run -v "$data_dir:/data" \
        --rm moinfar/sc-saver \
        -i /data/$inputfilename -o /data/output/ ${@:4}
 
 # copy results
-mkdir -p $outdir
-cp -r $data_dir/output/* $outdir
-cp $data_dir/output/saver_estimates.csv $outputpath
+mkdir -p "$outdir"
+cp -r "$data_dir/output/"* "$outdir"
+cp "$data_dir/output/saver_estimates.csv" "$outputpath"
 
 echo "imputed data saved to $outputpath"
