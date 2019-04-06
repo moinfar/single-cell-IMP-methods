@@ -31,6 +31,6 @@ docker run -v "$data_dir:/data" \
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-cp "$data_dir/output/uncurl_output.csv" "$outputpath"
+cp "$data_dir/output/imputed_values.csv" "$outputpath"
 
 echo "imputed data saved to $outputpath"
