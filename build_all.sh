@@ -43,6 +43,10 @@ cd containers/DCA
 sh ./builder.sh
 cd ../..
 
+cd containers/DCA-gpu
+sh ./builder.sh
+cd ../..
+
 # DECODE
 cd containers/DECODE
 sh ./builder.sh

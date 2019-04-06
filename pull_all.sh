@@ -9,6 +9,7 @@ docker pull moinfar/sc-magic:latest
 docker pull moinfar/sc-uncurl:latest
 docker pull moinfar/sc-biscuit:latest
 docker pull moinfar/sc-dca:latest
+docker pull moinfar/sc-dca-gpu:latest
 docker pull moinfar/sc-decode:latest
 docker pull moinfar/sc-drimpute:latest
 docker pull moinfar/sc-knnsmoothing:latest
