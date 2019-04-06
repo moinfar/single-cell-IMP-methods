@@ -1,4 +1,4 @@
-FROM moinfar/tensorflow:1.10.0-gpu-py3
+FROM tensorflow/tensorflow:1.10.0-gpu-py3
 
 COPY installer.sh /tmp/installer.sh
 RUN sh /tmp/installer.sh && \
