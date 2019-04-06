@@ -10,4 +10,4 @@ COPY runner.py /app/runner.py
 COPY runner.sh /app/runner.sh
 
 WORKDIR /app
-ENTRYPOINT ["python", "runner.py"]
+ENTRYPOINT ["bash", "runner.sh"]
