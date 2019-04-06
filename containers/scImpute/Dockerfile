@@ -9,4 +9,4 @@ COPY runner.R /app/runner.R
 COPY runner.sh /app/runner.sh
 
 WORKDIR /app
-ENTRYPOINT ["Rscript", "runner.sh"]
+ENTRYPOINT ["bash", "runner.sh"]
