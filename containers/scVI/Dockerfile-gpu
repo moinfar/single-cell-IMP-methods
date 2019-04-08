@@ -1,6 +1,6 @@
 FROM moinfar/bio-deep-python:3.6
 
-COPY installer.sh /tmp/installer.sh
+COPY installer-gpu.sh /tmp/installer-gpu.sh
 RUN sh /tmp/installer-gpu.sh && \
     rm /tmp/installer-gpu.sh && \
     mkdir /app/
