@@ -18,6 +18,8 @@ def parse_args():
     p.add_argument('-s', '--train-size', default=0.75, type=float,
                    help='faction of data used in training the NN.')
 
+    p.add_argument('--cuda', action='store_true')
+
     try:
         return p.parse_args()
     except ArgumentParserError:
@@ -54,7 +56,7 @@ vae = VAE(dataset.nb_genes, n_batch=0)
 trainer = UnsupervisedTrainer(vae,
                               dataset,
                               train_size=args.train_size,
-                              use_cuda=False,
+                              use_cuda=args.cuda,
                               frequency=5)
 trainer.train(n_epochs=args.n_epochs, lr=args.lr)
 

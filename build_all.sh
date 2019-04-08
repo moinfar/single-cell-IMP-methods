@@ -18,6 +18,11 @@ export pyver=2.7
 sh ./builder.sh
 cd ../..
 
+# python:3.6 with deep learning libraries
+cd containers/_bio_deep_py
+sh ./builder.sh
+cd ../..
+
 # scimpute
 cd containers/scImpute
 sh ./builder.sh
@@ -40,10 +45,6 @@ cd ../..
 
 # DCA
 cd containers/DCA
-sh ./builder.sh
-cd ../..
-
-cd containers/DCA-gpu
 sh ./builder.sh
 cd ../..
 

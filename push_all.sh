@@ -16,6 +16,7 @@ docker push moinfar/sc-knnsmoothing:latest
 docker push moinfar/sc-saucie:latest
 docker push moinfar/sc-saver:latest
 docker push moinfar/sc-scvi:latest
+docker push moinfar/sc-scvi-gpu:latest
 docker push moinfar/sc-zinbwave:latest
 docker push moinfar/sc-netsmooth:latest
 docker push moinfar/sc-deepimpute:latest
