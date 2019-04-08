@@ -64,13 +64,9 @@ full = trainer.create_posterior(trainer.model, dataset, indices=np.arange(len(da
 latent, _, _ = full.sequential().get_latent()
 imputed_values = full.sequential().imputation()
 
-results = trainer.get_all_latent_and_imputed_values(save_imputed=False,
-                                                    save_latent=False)
-
 make_sure_dir_exists(args.outputdir)
 filename_latent=os.path.join(args.outputdir, "latent.csv")
 filename_imputation=os.path.join(args.outputdir, "imputed_values.csv")
-filename_scaled_imputation=os.path.join(args.outputdir, "scaled_imputed_values.csv")
 
 pd.DataFrame(results.T, columns=X.index.values).to_csv(filename_latent)
 pd.DataFrame(imputed_values.T, columns=X.index.values, index=X.columns.values).to_csv(filename_imputation)
