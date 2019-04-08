@@ -16,9 +16,11 @@ docker pull moinfar/sc-decode:latest
 docker pull moinfar/sc-drimpute:latest
 docker pull moinfar/sc-knnsmoothing:latest
 docker pull moinfar/sc-saucie:latest
+docker pull moinfar/sc-saucie:gpu
 docker pull moinfar/sc-saver:latest
 docker pull moinfar/sc-scvi:latest
-docker pull moinfar/sc-scvi-gpu:latest
+docker pull moinfar/sc-scvi:gpu
 docker pull moinfar/sc-zinbwave:latest
 docker pull moinfar/sc-netsmooth:latest
 docker pull moinfar/sc-deepimpute:latest
+docker pull moinfar/sc-deepimpute:gpu

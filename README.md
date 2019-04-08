@@ -22,6 +22,10 @@ Command to run each algorithm:
 ./run_scripts/drimpute.sh input_file.csv output_file.csv output_dir
 # kNN-smoothing
 ./run_scripts/knn-smoothing.sh input_file.csv output_file.csv output_dir
+# deepImpute
+./run_scripts/knn-deepimpute.sh input_file.csv output_file.csv output_dir
+# netsmooth
+./run_scripts/knn-deepimpute.sh input_file.csv output_file.csv output_dir
 ```
 
 
@@ -32,4 +36,12 @@ However, To build docker images run:
 
 ```
 ./build_all.sh
+```
+
+### Pulling
+
+To pull all docker images once, execute:
+
+```
+./pull_all.sh
 ```
