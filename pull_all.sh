@@ -3,7 +3,8 @@
 docker pull moinfar/bio-r-base:3.5.1
 docker pull moinfar/bio-python:3.6
 docker pull moinfar/bio-python:2.7
-docker pull moinfar/bio-deep-python:3.6
+docker pull moinfar/bio-deep-python:tensorflow-py36
+docker pull moinfar/bio-deep-python:pytorch-py36
 
 docker pull moinfar/sc-scimpute:latest
 docker pull moinfar/sc-magic:latest
