@@ -1,5 +1,6 @@
 import os
 import argparse
+import numpy as np
 import pandas as pd
 
 
@@ -68,7 +69,7 @@ make_sure_dir_exists(args.outputdir)
 filename_latent=os.path.join(args.outputdir, "latent.csv")
 filename_imputation=os.path.join(args.outputdir, "imputed_values.csv")
 
-pd.DataFrame(results.T, columns=X.index.values).to_csv(filename_latent)
+pd.DataFrame(latent.T, columns=X.index.values).to_csv(filename_latent)
 pd.DataFrame(imputed_values.T, columns=X.index.values, index=X.columns.values).to_csv(filename_imputation)
 
 print("Done!")
