@@ -1,4 +1,4 @@
-FROM moinfar/bio-deep-python:3.6
+FROM moinfar/bio-deep-python:pytorch-py36
 
 COPY installer-gpu.sh /tmp/installer-gpu.sh
 RUN sh /tmp/installer-gpu.sh && \
