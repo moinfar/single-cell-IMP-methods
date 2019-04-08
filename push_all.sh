@@ -11,14 +11,14 @@ docker push moinfar/sc-magic:latest
 docker push moinfar/sc-uncurl:latest
 docker push moinfar/sc-biscuit:latest
 docker push moinfar/sc-dca:latest
-docker push moinfar/sc-dca-gpu:latest
+docker push moinfar/sc-dca:gpu
 docker push moinfar/sc-decode:latest
 docker push moinfar/sc-drimpute:latest
 docker push moinfar/sc-knnsmoothing:latest
 docker push moinfar/sc-saucie:latest
 docker push moinfar/sc-saver:latest
 docker push moinfar/sc-scvi:latest
-docker push moinfar/sc-scvi-gpu:latest
+docker push moinfar/sc-scvi:gpu
 docker push moinfar/sc-zinbwave:latest
 docker push moinfar/sc-netsmooth:latest
 docker push moinfar/sc-deepimpute:latest

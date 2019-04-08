@@ -25,7 +25,7 @@ fi
 # run algorithm
 cp "$inputpath" "$data_dir/$inputfilename"
 docker run --runtime=nvidia -v "$data_dir:/data" \
-       --rm moinfar/sc-scvi-gpu \
+       --rm moinfar/sc-scvi:gpu \
        "/data/$inputfilename" "/data/output/" "${@:4}" --cuda
 
 # copy results

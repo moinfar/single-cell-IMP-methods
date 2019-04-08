@@ -25,12 +25,12 @@ fi
 # run algorithm
 cp "$inputpath" "$data_dir/$inputfilename"
 docker run --runtime=nvidia -v "$data_dir:/data" \
-       --rm moinfar/sc-dca:gpu \
+       --rm moinfar/sc-deepimpute:gpu \
        "/data/$inputfilename" "/data/output/" "${@:4}"
 
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-cp "$data_dir/output/mean.csv" "$outputpath"
+cp "$data_dir/output/deepimpute.csv" "$outputpath"
 
 echo "imputed data saved to $outputpath"
