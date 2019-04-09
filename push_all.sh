@@ -23,4 +23,3 @@ docker push moinfar/sc-scvi:gpu
 docker push moinfar/sc-zinbwave:latest
 docker push moinfar/sc-netsmooth:latest
 docker push moinfar/sc-deepimpute:latest
-docker push moinfar/sc-deepimpute:gpu
