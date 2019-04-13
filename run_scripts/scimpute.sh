@@ -31,6 +31,6 @@ docker run -v "$data_dir:/data" \
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-cp "$data_dir/output/scimpute_count.csv" "$outputpath"
+ln -s "$data_dir/output/scimpute_count.csv" "$outputpath"
 
 echo "imputed data saved to $outputpath"
