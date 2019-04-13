@@ -31,6 +31,6 @@ docker run --runtime=nvidia -v "$data_dir:/data" \
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-ln -s "$data_dir/output/mean.csv" "$outputpath"
+ln -s "$outdir/mean.csv" "$outputpath"
 
 echo "imputed data saved to $outputpath"

@@ -31,6 +31,6 @@ docker run -v "$data_dir:/data" \
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-ln -s "$data_dir/output/knn_smoothed.csv" "$outputpath"
+ln -s "$outdir/knn_smoothed.csv" "$outputpath"
 
 echo "imputed data saved to $outputpath"
