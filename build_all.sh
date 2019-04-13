@@ -92,3 +92,8 @@ cd ../..
 cd containers/deepImpute
 sh ./builder.sh
 cd ../..
+
+# scScope
+cd containers/scScope
+sh ./builder.sh
+cd ../..

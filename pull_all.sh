@@ -23,3 +23,5 @@ docker pull moinfar/sc-scvi:gpu
 docker pull moinfar/sc-zinbwave:latest
 docker pull moinfar/sc-netsmooth:latest
 docker pull moinfar/sc-deepimpute:latest
+docker pull moinfar/sc-scscope:latest
+docker pull moinfar/sc-scscope:gpu
