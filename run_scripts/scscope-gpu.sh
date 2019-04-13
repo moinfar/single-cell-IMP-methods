@@ -26,7 +26,7 @@ fi
 cp "$inputpath" "$data_dir/$inputfilename"
 docker run --runtime=nvidia -v "$data_dir:/data" \
        --rm moinfar/sc-scscope:gpu \
-       "/data/$inputfilename" "/data/output/" "${@:4}" --cuda
+       "/data/$inputfilename" "/data/output/" "${@:4}"
 
 # copy results
 mkdir -p "$outdir"
