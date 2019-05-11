@@ -31,6 +31,6 @@ docker run -v "$data_dir:/data" \
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-ln -s "$data_dir/output/updated_expression.txt" "$outputpath"
+ln -s "$outdir/updated_expression.txt" "$outputpath"
 
 echo "imputed data saved to $outputpath"
