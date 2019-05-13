@@ -31,6 +31,12 @@ docker run -v "$data_dir:/data" \
 # copy results
 mkdir -p "$outdir"
 cp -r "$data_dir/output/"* "$outdir"
-ln -s "$outdir/imputed_values.csv" "$outputpath"
+
+if [ -e "$outdir/full_imputed_values.csv" ];
+then
+  ln -s "$outdir/full_imputed_values.csv" "$outputpath"
+else
+  ln -s "$outdir/imputed_values.csv" "$outputpath"
+fi
 
 echo "imputed data saved to $outputpath"
