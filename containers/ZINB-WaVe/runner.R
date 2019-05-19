@@ -61,7 +61,7 @@ write.csv(imputedValues, file.path(opt$outputdir, "imputed_values.csv"))
 write.csv(normalizedValues, file.path(opt$outputdir, "normalized_values.csv"))
 
 if (opt$gene_subset > 0) {
-  write.csv(imputedValues, file.path(opt$outputdir, "full_imputed_values.csv"))
+  write.csv(full_imputed_values, file.path(opt$outputdir, "full_imputed_values.csv"))
 }
 
 print("Done!")
